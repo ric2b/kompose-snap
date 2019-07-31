@@ -1,0 +1,21 @@
+name: kompose
+version: 1.18.0
+summary: A conversion tool to go from Docker Compose to Kubernetes https://kompose.io
+description: |
+    kompose is a tool to help users who are familiar with docker-compose move to Kubernetes. 
+    kompose takes a Docker Compose file and translates it into Kubernetes resources.
+license: Apache-2.0
+
+base: core18
+confinement: strict
+grade: stable
+
+parts:
+  kompose:
+    plugin: dump
+    source: https://github.com/kubernetes/kompose/releases/download/v$SNAPCRAFT_PROJECT_VERSION/kompose-linux-amd64.tar.gz
+
+apps:
+  kompose:
+    command: ./kompose-linux-amd64
+    plugs: [network, home, removable-media]
