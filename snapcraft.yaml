@@ -1,5 +1,5 @@
 name: kompose
-version: 1.18.0
+version: 1.21.0
 summary: A conversion tool to go from Docker Compose to Kubernetes https://kompose.io
 description: |
     kompose is a tool to help users who are familiar with docker-compose move to Kubernetes. 
